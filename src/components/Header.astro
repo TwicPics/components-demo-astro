@@ -1,0 +1,106 @@
+---
+import githubLogo from "../assets/github-mark-white.svg";
+---
+
+<header id="twic-header">
+  <a href="/" title="Home">
+    <h1 class="heading-primary">
+      <img
+        class="twicpics-logo"
+        src="https://assets.twicpics.com/demo/@twicpics-components/logos/twicpics.svg"
+        alt="TwicPics logo"
+      />
+      <span>x</span>
+      <img
+        class="framework-logo"
+        src="https://assets.twicpics.com/demo/@twicpics-components/logos/astro.png"
+        alt="Astro Logo"
+      />
+    </h1>
+  </a>
+  <div class="ribbon">
+    <div>
+      <a target="_blank" rel="noreferrer" title="Open in Github"
+        ><img src={githubLogo} alt="Open in Github" /></a
+      >
+    </div>
+  </div>
+</header>
+
+<style lang="scss">
+  $bg-color: #f9fafb;
+  $bg-github: #6d6d6d;
+  $ribbon-height: 30px;
+  $height: 100px;
+
+  #twic-header {
+    height: $height;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid #e3e3e4;
+    background-color: $bg-color;
+    z-index: 10;
+
+    & a {
+      text-decoration: none;
+      color: initial;
+    }
+
+    & .heading-primary {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 30px;
+      font-size: 1.2em;
+      font-weight: 400;
+
+      & .twicpics-logo {
+        aspect-ratio: 140/39;
+        width: 140px;
+      }
+      & .framework-logo {
+        margin-top: 5px;
+        aspect-ratio: 452/149;
+        width: 120px;
+      }
+    }
+
+    & .ribbon {
+      background-color: $bg-github;
+      overflow: hidden;
+      white-space: nowrap;
+      position: absolute;
+      left: -33px;
+      top: 20px;
+      transform: rotate(-45deg);
+      box-shadow: 0 0 5px #888;
+      & div {
+        color: #fff;
+        display: block;
+        font: bold 81.25% "Helvetica Neue", Helvetica, Arial, sans-serif;
+        width: 1.42 * $height;
+        line-height: $ribbon-height;
+        text-align: center;
+        & a {
+          margin-right: 10px;
+          & img {
+            height: 23px;
+            width: 23px;
+            line-height: 23px;
+            vertical-align: middle;
+            margin-top: -4px;
+            transition-duration: 200ms;
+            &:hover {
+              transform: rotate(45deg);
+            }
+          }
+        }
+      }
+    }
+  }
+</style>

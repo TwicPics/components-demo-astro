@@ -1,0 +1,21 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Slider } from "../components/slider";
+import Wrapper from "../components/Wrapper.astro";
+---
+
+<Layout title="TwicPics - Slider">
+  <main>
+    <Wrapper title="A Lazy Slider">
+      <p>
+        A simple slider that uses TwicPics for automatic lazy-loading, CLS
+        optimization and art directions adaptation.
+      </p>
+      <p>
+        <strong>Change the width of your browser</strong> to see the image aspect-ratio
+        adapt according to the CSS rules.
+      </p>
+      <Slider client:load />
+    </Wrapper>
+  </main>
+</Layout>

@@ -1,0 +1,146 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+const samples = [
+  {
+    href: "/art-direction",
+    src: "components/greece.jpg",
+    title: "Art Direction",
+  },
+  {
+    href: "/basic",
+    src: "https://assets.twicpics.com/examples/football.jpg",
+    title: "Basic Grid",
+  },
+  {
+    href: "/flip-cards",
+    src: "components/flip/orange-1.jpg",
+    title: "Flip Cards",
+  },
+  {
+    href: "/grid-and-zoom",
+    src: "components/portraits/woman-1.jpg",
+    title: "Grid and Zoom",
+  },
+  {
+    href: "/slider",
+    src: "components/slider/pantone.jpg",
+    title: "Lazy Slider",
+  },
+  {
+    href: "/short-video",
+    src: "video/skater.mp4",
+    title: "Short Video",
+    video: true,
+  },
+];
+---
+
+<Layout title="TwicPics x Astro">
+  <main>
+    <div class="twic-grid">
+      {
+        samples.map(({ href, src, title, video }) => (
+          <>
+            <Card href={href} src={src} title={title} video={video} />
+          </>
+        ))
+      }
+    </div>
+    <div class="panel">
+      <p>
+        This project is a demonstration project of <a
+          href="https://www.twicpics.com/docs/essentials/components??utm_source=github&utm_medium=organic&utm_campaign=components#components"
+          target="_blank"
+          rel="noreferrer">TwicPics Components</a
+        >
+        using <a href="https://astro.build/" target="_blank" rel="noreferrer"
+          >Astro.js</a
+        > with <a
+          href="https://docs.astro.build/en/guides/integrations-guide/react/"
+          target="_blank"
+          rel="noreferrer">React Integration</a
+        >.
+      </p>
+      <p>
+        Regardless of the framework you work with, <a
+          href="https://www.twicpics.com/?utm_source=github&utm_medium=organic&utm_campaign=components"
+          target="_blank"
+          rel="noreferrer">TwicPics</a
+        > is the most efficient solution to deliver your images and your videos and
+        make them as responsive as desired.
+      </p>
+      <p>Feel free to explore our demos and integration examples for :</p>
+      <ul>
+        <li>
+          <a
+            href="https://twicpics-angular-demo.netlify.app/?utm_source=github&utm_campaign=components&utm_medium=organic"
+            target="_blank"
+            rel="noreferrer">Angular</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://twicpics-react-demo.netlify.app/?utm_source=github&utm_campaign=components&utm_medium=organic"
+            target="_blank"
+            rel="noreferrer">React</a
+          >, <a
+            href="https://twicpics-next-demo.netlify.app/?utm_source=github&utm_campaign=components&utm_medium=organic"
+            target="_blank"
+            rel="noreferrer">Next.js</a
+          > and <a
+            href="https://twicpics-gatsby-demo.netlify.app/?utm_source=github&utm_campaign=components&utm_medium=organic"
+            target="_blank"
+            rel="noreferrer">Gatsby.js</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://twicpics-vue2-demo.netlify.app/?utm_source=github&utm_campaign=components&utm_medium=organic"
+            target="_blank"
+            rel="noreferrer">Vue.js (version 2)</a
+          >, <a
+            href="https://twicpics-vue3-demo.netlify.app/?utm_source=github&utm_campaign=components&utm_medium=organic"
+            target="_blank"
+            rel="noreferrer">Vue.js (version 3)</a
+          >, <a
+            href="https://twicpics-nuxt2-demo.netlify.app/?utm_source=github&utm_campaign=components&utm_medium=organic"
+            target="_blank"
+            rel="noreferrer">Nuxt.js (version 2)</a
+          > and <a
+            href="https://twicpics-nuxt3-demo.netlify.app/?utm_source=github&utm_campaign=components&utm_medium=organic"
+            target="_blank"
+            rel="noreferrer">Nuxt3.js (version 2)</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://twicpics-svelte-demo.netlify.app/?utm_source=github&utm_campaign=components&utm_medium=organi"
+            target="_blank"
+            rel="noreferrer">Svelte</a
+          > and <a
+            href="https://twicpics-sveltekit-demo.netlify.app/?utm_source=github&utm_campaign=components&utm_medium=organic"
+            target="_blank"
+            rel="noreferrer">SvelteKit</a
+          >
+        </li>
+      </ul>
+    </div>
+  </main>
+</Layout>
+
+<style lang="scss">
+  .twic-grid {
+    --twic-grid-columns-width: calc(200px);
+  }
+  .panel {
+    margin: 1rem 0;
+    border: 1px solid rgba(var(--accent), 25%);
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.4rem;
+  }
+  p {
+    margin-bottom: 1rem;
+  }
+</style>

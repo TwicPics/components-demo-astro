@@ -1,0 +1,27 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Wrapper from "../components/Wrapper.astro";
+import { ArtDirections } from "../components/art-directions";
+---
+
+<Layout title="TwicPics - Art Direction">
+  <main>
+    <Wrapper title="Art directions with CSS media queries">
+      <p>
+        Setting up components using CSS enables hassle-free responsive designs.
+      </p>
+      <p>
+        You do not need to create a set of images derived from the original.
+      </p>
+      <p>
+        You only need to manage a master image in your template: TwicPics
+        understands your CSS and does the rest.
+      </p>
+      <p>
+        <strong>Change the width of your browser</strong>
+        to see the image ratio adapt according to the CSS rules.
+      </p>
+      <ArtDirections client:load />
+    </Wrapper>
+  </main>
+</Layout>

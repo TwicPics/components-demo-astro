@@ -1,0 +1,14 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Wrapper from "../components/Wrapper.astro";
+import { FlipCards } from "../components/flip-cards";
+---
+
+<Layout title="TwicPics - Flip Cards">
+  <main>
+    <Wrapper title="Flip cards">
+      <p>Move your mouse over the images below.</p>
+      <FlipCards client:load />
+    </Wrapper>
+  </main>
+</Layout>

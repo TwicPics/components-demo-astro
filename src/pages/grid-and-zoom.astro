@@ -1,0 +1,17 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Wrapper from "../components/Wrapper.astro";
+import { GridAndZoom } from "../components/grid-and-zoom";
+---
+
+<Layout title="TwicPics - Grid & Zoom">
+  <main>
+    <Wrapper title="Grid & zoom effect">
+      <p>A responsive grid of images enhanced by zoom transition.</p>
+      <p>
+        <strong>Scroll down to experience lazy loading in action.</strong>
+      </p>
+      <GridAndZoom client:load />
+    </Wrapper>
+  </main>
+</Layout>

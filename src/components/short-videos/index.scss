@@ -1,0 +1,19 @@
+#twic-short-videos-container {
+  .twic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    align-items: center;
+    grid-gap: 1.8rem;
+    /* variables */
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(var(--twic-grid-columns-width, 300px), 1fr)
+    );
+    & .twic-item {
+      & .twic-w {
+        background-color: #00ffa3;
+        display: block;
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+---
+import { TwicImg, TwicVideo } from "@twicpics/components/react";
+export interface Props {
+  href: string;
+  intrinsic?: string;
+  src: string;
+  title: string;
+  video?: boolean;
+}
+
+const { href, intrinsic, src, title, video } = Astro.props;
+---
+
+<div class="link-card">
+  <a href={href}>
+    <figure>
+      {
+        video ? (
+          <TwicVideo src={src} ratio="0.95" intrinsic={intrinsic} client:load />
+        ) : (
+          <TwicImg src={src} focus="auto" ratio="0.95" client:load />
+        )
+      }
+      <figcaption>
+        <p>{title}</p>
+      </figcaption>
+    </figure>
+  </a>
+</div>
+<style lang="scss">
+  .link-card {
+    background-color: #f9fafb;
+    border: 1px solid #e3e3e4;
+    border-radius: 0.4rem;
+    padding: 12px;
+    & a {
+      width: 100%;
+    }
+    & figure {
+      position: relative;
+      & figcaption {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        font-size: 1em;
+        font-weight: 600;
+        color: #fff;
+        background: rgba(0, 0, 0, 0.5);
+        transition: all 0.3s;
+      }
+      &:hover {
+        cursor: pointer;
+        & figcaption {
+          bottom: 40%;
+        }
+      }
+    }
+  }
+</style>

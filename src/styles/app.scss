@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f5f5;
+  font-family: "Montserrat", sans-serif;
+  color: #5b595c;
+}
+
+$height: 100px;
+main {
+  margin: 40px;
+  margin-top: $height + 40px;
+  max-width: 1500px;
+  @media screen and (min-width: 768px) {
+    margin: 80px 60px;
+    margin-top: $height + 80px;
+  }
+  @media screen and (min-width: 1600px) {
+    margin: 2rem auto;
+    margin-top: calc($height + 2rem);
+  }
+}
+
+.twic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  align-items: center;
+  grid-gap: 1.8rem;
+  /* variables */
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(var(--twic-grid-columns-width, 300px), 1fr)
+  );
+}
+
+.twic-item {
+  position: relative;
+  padding: 12px;
+  border-radius: 6px;
+  box-shadow: 0 2px 9px 0 rgb(39 37 63 / 15%);
+
+  & .twic-button {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    width: 100%;
+  }
+
+  & > span {
+    display: block;
+    margin-top: 12px;
+    padding: 6px 12px;
+    font-size: 0.8em;
+    font-weight: 400;
+    background-color: #f2f2f2;
+  }
+}
+
+ul {
+  padding-left: 32px;
+}
+
+a {
+  &:link,
+  &:visited,
+  &:hover,
+  &:active {
+    color: #8e08fd;
+  }
+}
