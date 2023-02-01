@@ -1,5 +1,9 @@
 ---
 import githubLogo from "../assets/github-mark-white.svg";
+import stackBlitzLogo from "../assets/stackblitz.svg";
+const GITHUB_REPO_NAME = `TwicPics/components-demo-astro`;
+const GITHUB_URL = `https://github.com/${GITHUB_REPO_NAME}`;
+const STACKBLITZ_URL = `https://stackblitz.com/github/${GITHUB_REPO_NAME}?file='README.md'}`;
 ---
 
 <header id="twic-header">
@@ -20,8 +24,18 @@ import githubLogo from "../assets/github-mark-white.svg";
   </a>
   <div class="ribbon">
     <div>
-      <a target="_blank" rel="noreferrer" title="Open in Github"
-        ><img src={githubLogo} alt="Open in Github" /></a
+      <a
+        target="_blank"
+        href={GITHUB_URL}
+        rel="noreferrer"
+        title="Open in Github"><img src={githubLogo} alt="Open in Github" /></a
+      >
+      <a
+        target="_blank"
+        href={STACKBLITZ_URL}
+        rel="noreferrer"
+        title="Open in StackBlitz"
+        ><img src={stackBlitzLogo} alt="Open in StackBlitz" /></a
       >
     </div>
   </div>
