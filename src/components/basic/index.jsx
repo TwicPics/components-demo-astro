@@ -14,7 +14,7 @@ export const Basic = () => {
         </div>
         <div className="twic-item">
           <TwicImg
-            src="/football.jpg"
+            src="football.jpg"
             ratio="16/9"
             mode="cover"
             placeholder="meancolor"
@@ -25,7 +25,7 @@ export const Basic = () => {
           </span>
         </div>
         <div className="twic-item">
-          <TwicImg src="/football.jpg" step="100" mode="contain" ratio="16/9" />
+          <TwicImg src="football.jpg" step="100" mode="contain" ratio="16/9" />
           <span>
             <Code>ratio="16/9"</Code>&<Code>mode="contain"</Code>: the image
             sits inside the area
@@ -33,7 +33,7 @@ export const Basic = () => {
         </div>
         <div className="twic-item">
           <TwicImg
-            src="/football.jpg"
+            src="football.jpg"
             focus="auto"
             mode="contain"
             ratio="2/3"
