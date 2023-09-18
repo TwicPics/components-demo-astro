@@ -11,7 +11,7 @@ const STACKBLITZ_URL = `https://stackblitz.com/github/${GITHUB_REPO_NAME}?file='
     <h1 class="heading-primary">
       <img
         class="twicpics-logo"
-        src="https://assets.twicpics.com/demo/@twicpics-components/logos/twicpics.svg"
+        src="https://assets.twicpics.com/demo/@twicpics-components/logos/twicpics-by-frontify.svg"
         alt="TwicPics logo"
       />
       <span>x</span>
@@ -52,6 +52,7 @@ const STACKBLITZ_URL = `https://stackblitz.com/github/${GITHUB_REPO_NAME}?file='
     position: fixed;
     top: 0;
     left: 0;
+    padding: 6px;
     right: 0;
     display: flex;
     flex-direction: column;
@@ -74,13 +75,19 @@ const STACKBLITZ_URL = `https://stackblitz.com/github/${GITHUB_REPO_NAME}?file='
       font-weight: 400;
 
       & .twicpics-logo {
-        aspect-ratio: 140/39;
-        width: 140px;
+        aspect-ratio: 300/58;
+        width: 165px;
+        @media (min-width: 640px) {
+          width: 250px;
+        }
       }
       & .framework-logo {
         margin-top: 5px;
         aspect-ratio: 452/149;
-        width: 120px;
+        width: 80px;
+        @media (min-width: 640px) {
+          width: 120px;
+        }
       }
     }
 
@@ -115,6 +122,9 @@ const STACKBLITZ_URL = `https://stackblitz.com/github/${GITHUB_REPO_NAME}?file='
           }
         }
       }
+    }
+    @media (min-width: 640px) {
+      padding: 0px;
     }
   }
 </style>
