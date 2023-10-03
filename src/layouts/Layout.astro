@@ -1,6 +1,7 @@
 ---
 import "@twicpics/components/style.css";
 import "../styles/app.scss";
+import { ViewTransitions } from 'astro:transitions';
 import Header from "../components/Header.astro";
 export interface Props {
   title: string;
@@ -11,10 +12,15 @@ const { title } = Astro.props;
 
 <script>
   import { installTwicpics } from "@twicpics/components/react";
-  installTwicpics({
-    // domain is mandatory
-    domain: "https://demo.twic.pics",
+  const _installTwicpics = () => installTwicpics({
+    domain: "https://demo.twic.pics/",
   });
+  
+  // runs at startup
+  _installTwicpics();
+  
+   // runs on view transitions navigation
+  document.addEventListener('astro:after-swap', () => _installTwicpics());
 </script>
 <html lang="en">
   <head>
@@ -23,6 +29,7 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.png" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <ViewTransitions />
   </head>
   <body>
     <Header />

@@ -8,17 +8,17 @@ const { title } = Astro.props;
 
 <div>
   <h1>{title}</h1>
-  <slot />
+  <article><slot /></article>
 </div>
 <style>
   h1 {
     margin-bottom: 1rem;
   }
-  :global(p) {
+  article :global(p) {
     margin-bottom: 0.5rem;
     text-align: justify;
   }
-  :global(p:last-of-type) {
+  article :global(p:last-of-type) {
     margin-bottom: 2rem;
   }
 </style>
