@@ -12,15 +12,9 @@ const { title } = Astro.props;
 
 <script>
   import { installTwicpics } from "@twicpics/components/react";
-  const _installTwicpics = () => installTwicpics({
+  installTwicpics({
     domain: "https://demo.twic.pics/",
   });
-  
-  // runs at startup
-  _installTwicpics();
-  
-   // runs on view transitions navigation
-  document.addEventListener('astro:after-swap', () => _installTwicpics());
 </script>
 <html lang="en">
   <head>
