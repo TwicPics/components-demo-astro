@@ -12,15 +12,15 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/react": "3.0.9",
-    "@twicpics/components": "0.28",
-    "@types/react": "18.2.48",
-    "@types/react-dom": "18.2.18",
-    "astro": "4.2.1",
+    "@astrojs/react": "3.1.0",
+    "@twicpics/components": "0.28.1",
+    "@types/react": "18.2.71",
+    "@types/react-dom": "18.2.22",
+    "astro": "4.5.9",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "sass": "1.70.0"
+    "sass": "1.72.0"
   }
 }
